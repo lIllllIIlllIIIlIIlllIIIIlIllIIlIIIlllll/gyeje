@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bands>
+  <band>
+    <name>츠유</name>
+    <description>푸스 byeong shin</description>
+    <albums>
+      <album year="2020">역시 비는 내리네</album>
+      <album year="2021">당신을 불행으로 인도해드릴게요</album>
+      <album year="2023">언더 멘탈리티</album>
+    </albums>
+  </band>
+  <band>
+    <name>결속 밴드</name>
+    <description>봇치</description>
+    <albums>
+      <album year="2022">결속 밴드</album>
+      <album year="2023">빛 속으로</album>
+      <album year="2024">We will</album>
+    </albums>
+  </band>
+</bands>

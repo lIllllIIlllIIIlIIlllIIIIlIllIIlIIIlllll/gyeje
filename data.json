@@ -17,6 +17,15 @@
         { "album": "빛 속으로", "year": 2023 },
         { "album": "We will", "year": 2024 }
       ]
+    },
+    {
+      "name": "즛토마요",
+      "description": "노래 좋음",
+      "albums": [
+        { "album": "잠잠화", "year": 2019 },
+        { "album": "구사레", "year": 2021 },
+        { "album": "침향학", "year": 2023 }
+      ]
     }
   ]
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    .nav {
+      display: flex;
+      padding: 15px;
+      align-items: center;
+      background: white;
+    }
+    .nav a {
+      margin-right: 10px;
+    }
+    .logo {
+      font-weight: bold;
+      background-color: black;
+      color: white;
+    }
+    .Hub {
+      font-weight: bold;
+      background-color: orange;
+    }
+
+
+    .grey-bg {
+      background: #eee;
+    }
+    .white-bg {
+      background: white;
+      margin: 20px;
+      border-radius: 5px;
+    }
+    .list-box {
+      padding: 10px;
+      border-bottom: 1px solid#eee;
+    }
+    .list-box h4 {
+      font-size: 16px;
+      margin: 5px;
+    }
+    .list-box p {
+      font-size: 13px;
+      margin: 5px;
+      color: grey;
+    }
+
+
+    input, div {
+      box-sizing: border-box;
+    }
+    .form-box {
+      background: white;
+      padding: 25px;
+      margin: 20px;
+      border-radius: 8px;
+    }
+    .form-box input {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .form-box button {
+      padding: 10px;
+      border: none;
+      background: lightgrey;
+      border-radius: 5px;
+    }
+
+
+    .detail-bg {
+      background: white;
+      padding: 15px;
+      margin-top: 10px;
+    }
+
+
+    .pagination {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+    .pagination a {
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+      color: #007bff;
+      text-decoration: none;
+      font-size: 18px;
+      display: inline-block;
+    }
+    .pagination a:hover {
+      background-color: #e6f0ff;
+    }
+    .pagination a.active {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+  </style>
+</head>
+<body class="grey-bg">
+  <div class="nav">
+    <span class="logo">Post</span><a class="Hub">Hub</a>
+    <a href="https://gyeje.vercel.app/list.html">글 보기</a>
+    <a href="" onclick="alert('그딴 거 없다')">글 쓰기</a>
+  </div>
+  <div class="detail-bg">
+    <h4>엄준식은 살아있다</h4>
+    <p>사실 구라임 ㅅㄱ</p>
+  </div>
+</body>
+</html>

@@ -9,24 +9,33 @@
       <album year="2023">언더 멘탈리티</album>
     </albums>
   </band>
-
   <band>
     <name>결속 밴드</name>
     <description>봇치</description>
     <albums>
+      <album year="2022">청춘 콤플렉스</album>
       <album year="2022">결속 밴드</album>
       <album year="2023">빛 속으로</album>
+      <album year="2024">Re:결속 밴드</album>
       <album year="2024">We will</album>
+      <album year="2024">결속 밴드의 불러보았다</album>
     </albums>
   </band>
-
   <band>
     <name>즛토마요</name>
-    <description>노래 좋음</description>
+    <description>taidada랑 잔기 좋으니까 들으셈</description>
     <albums> 
       <album year="2019">잠잠화</album>
       <album year="2021">구사레</album>
       <album year="2023">침향학</album>
+    </albums>
+  </band>
+  <band>
+    <name>토게나시 토게아리</name>
+    <description>빨뚝이 미친년이라서 재밌음</description>
+    <albums> 
+      <album year="2024">토게아리</album>
+      <album year="2024">토게나시</album>
     </albums>
   </band>
 </bands>

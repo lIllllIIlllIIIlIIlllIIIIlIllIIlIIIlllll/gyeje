@@ -130,7 +130,7 @@
   <button class="search-send">검색</button>
 
   <script>
-      document.querySelector('.search-send').addEventListener('click', () => {
+    document.querySelector('.search-send').addEventListener('click', () => {
       let 입력한거 = document.querySelector('.search').value
       location.href = $`https://gyeje.vercel.app/serch?val={입력한거}`
     })

@@ -145,7 +145,7 @@
       .then(res => res.json())
       .then(posts => {
         const list = document.getElementById('list')
-        posts.forEach(element => {
+        posts.forEach(post => {
           list.innerHTML += `
             <div class="list-box">
               <h4>

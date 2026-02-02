@@ -8,6 +8,19 @@
     body {
       margin: 0;
     }
+
+    .search {
+      margin-left: 20px;
+      padding: 5px;
+    }
+    .search-send {
+      padding: 6px 10px;
+      background: lightgray;
+      border: none;
+      border-radius: 5px;
+      vertical-align: middle;
+    }
+    
     .nav {
       display: flex;
       padding: 15px;
@@ -108,37 +121,47 @@
 </head>
 <body class="grey-bg">
   <div class="nav">
-      <span class="logo">Post</span><a class="Hub">Hub</a>
-      <a href="https://gyeje.vercel.app/list.html">글 보기</a>
-      <a href="" onclick="alert('그딴 거 없다')">글 쓰기</a>
+    <span class="logo">Post</span><a class="Hub">Hub</a>
+    <a href="https://gyeje.vercel.app/list.html">글 보기</a>
+    <a href="" onclick="alert('그딴 거 없다')">글 쓰기</a>
   </div>
   <div class="white-bg">
 
-    <div class="list-box">
-      <h4>
-        <a href="https://gyeje.vercel.app/detail/1.html">내가 첫 번째 게시물이네 ㅋ</a>
-        <a onclick="alert('그딴 거 없다')">✏️</a>
-        <span onclick="alert('그딴 거 없다')">🗑️</span>
-      </h4>
-      <p>.java</p>
-    </div>
+  <input class="search">
+  <button class="search-send">검색</button>
 
-    <div class="list-box">
-      <h4>
-        <a href="https://gyeje.vercel.app/detail/2.html">nodejs 독학하기</a>
-        <a onclick="alert('그딴 거 없다')">✏️</a>
-        <span onclick="alert('그딴 거 없다')">🗑️</span>
-      </h4>
-      <p>바보입니다</p>
-    </div>
+  <script>
+    document.querySelector('.search-send').addEventListener('click', () => {
+      let 입력한거 = document.querySelector('.search').value
+      location.href = $`/serch?val={입력한}`
+    })
+  </script>
+    
+  <div class="list-box">
+    <h4>
+      <a href="https://gyeje.vercel.app/detail/1.html">내가 첫 번째 게시물이네 ㅋ</a>
+      <a onclick="alert('그딴 거 없다')">✏️</a>
+      <span onclick="alert('그딴 거 없다')">🗑️</span>
+    </h4>
+    <p>.java</p>
+  </div>
 
-    <div class="list-box">
-      <h4>
-        <a href="https://gyeje.vercel.app/detail/3.html">롯쿠나 키미토와 오와카레다</a>
-        <a onclick="alert('그딴 거 없다')">✏️</a>
-        <span onclick="alert('그딴 거 없다')">🗑️</span>
-      </h4>
-      <p>브로 Vip</p>
+  <div class="list-box">
+    <h4>
+      <a href="https://gyeje.vercel.app/detail/2.html">nodejs 독학하기</a>
+      <a onclick="alert('그딴 거 없다')">✏️</a>
+      <span onclick="alert('그딴 거 없다')">🗑️</span>
+    </h4>
+    <p>바보입니다</p>
+  </div>
+
+  <div class="list-box">
+    <h4>
+      <a href="https://gyeje.vercel.app/detail/3.html">롯쿠나 키미토와 오와카레다</a>
+      <a onclick="alert('그딴 거 없다')">✏️</a>
+      <span onclick="alert('그딴 거 없다')">🗑️</span>
+    </h4>
+    <p>브로 Vip</p>
     </div>
 
     <div class="list-box">

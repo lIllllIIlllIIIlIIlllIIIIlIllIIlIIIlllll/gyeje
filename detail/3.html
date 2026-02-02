@@ -113,10 +113,23 @@
     <a href="" onclick="alert('그딴 거 없다')">글 쓰기</a>
   </div>
   <div class="detail-bg">
-    <h4>롯쿠나 키미토와 오와카레다</h4>
-    <p>
-      츠유, 유이카 노래 좋음
-    </p>
+    <h4 id="title"></h4>
+    <p id="content"></p>
   </div>
+<script>
+  const id = location.pathname.split('/').pop().replace('.html', '');
+
+  fetch('/post.json')
+    .then(res => res.json())
+    .then(posts => {
+      const post = posts.find(p => p.id === id);
+      if (!post) return;
+
+      document.getElementById('title').innerText = post.title;
+      document.getElementById('content').innerHTML =
+        post.content.replaceAll('\n', '<br>');
+    });
+</script>
+
 </body>
 </html>

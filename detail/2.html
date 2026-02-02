@@ -113,8 +113,23 @@
     <a href="" onclick="alert('그딴 거 없다')">글 쓰기</a>
   </div>
   <div class="detail-bg">
-    <h4>nodejs 독학하기</h4>
-    <p>안 하면 내 얼굴 내성발톱 앓는 오랑우탄 발가락</p>
+    <h4 id="title"></h4>
+    <p id="content"></p>
   </div>
+<script>
+  const id = location.pathname.split('/').pop().replace('.html', '');
+
+  fetch('/post.json')
+    .then(res => res.json())
+    .then(posts => {
+      const post = posts.find(p => p.id === id);
+      if (!post) return;
+
+      document.getElementById('title').innerText = post.title;
+      document.getElementById('content').innerHTML =
+        post.content.replaceAll('\n', '<br>');
+    });
+</script>
+
 </body>
 </html>

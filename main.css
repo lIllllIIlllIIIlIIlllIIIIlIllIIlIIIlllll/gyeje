@@ -38,12 +38,7 @@ a:visited {
 .Hub {
   font-weight: bold;
   background-color: orange;
-}
-.nav-spacer {
-  flex: 1;
-}
-.nav-img {
-  margin-left: 10px;
+  color: #262626
 }
 
 

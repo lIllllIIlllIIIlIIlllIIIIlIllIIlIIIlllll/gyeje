@@ -1,6 +1,13 @@
 body {
   margin: 0;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: grey;
+}
 
 .search {
   margin-left: 20px;

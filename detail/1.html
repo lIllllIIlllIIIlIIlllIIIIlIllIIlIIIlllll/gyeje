@@ -113,26 +113,23 @@
     <a href="" onclick="alert('그딴 거 없다')">글 쓰기</a>
   </div>
   <div class="detail-bg">
-    <h4>내가 첫 번째 게시물이네 ㅋ</h4>
-    <p>
-      파이썬 강의<br>
-      https://cafe.naver.com/onimobile/16967543 1강<br>
-      https://cafe.naver.com/onimobile/16968012 2강<br>
-      https://cafe.naver.com/onimobile/16971393 3강<br>
-      <br>
-      자바 강의<br>
-      https://cafe.naver.com/onimobile/16983544 1강<br>
-      https://cafe.naver.com/onimobile/16986034 2강<br>
-      https://cafe.naver.com/onimobile/17000272 3강<br>
-      <br>
-      자바스크립트 es2015+ (심화)<br>
-      https://cafe.naver.com/onimobile/17007525 1강<br>
-      https://naver.me/xydW3tf6 2강<br>
-      https://cafe.naver.com/onimobile/17011443 3강<br>
-      url~~ 4강<br>
-      <br>
-      파이썬 웹 크롤링, axios, 타입스크립트 준비 중
-    </p>
+    <h4 id="title"></h4>
+    <p id="content"></p>
   </div>
+<script>
+  const id = location.pathname.split('/').pop().replace('.html', '');
+
+  fetch('/post.json')
+    .then(res => res.json())
+    .then(posts => {
+      const post = posts.find(p => p.id === id);
+      if (!post) return;
+
+      document.getElementById('title').innerText = post.title;
+      document.getElementById('content').innerHTML =
+        post.content.replaceAll('\n', '<br>');
+    });
+</script>
+
 </body>
 </html>

@@ -125,53 +125,40 @@
     <a href="https://gyeje.vercel.app/list.html">글 보기</a>
     <a href="" onclick="alert('그딴 거 없다')">글 쓰기</a>
   </div>
-  <div class="white-bg">
-
+  
   <input class="search">
   <button class="search-send">검색</button>
 
   <script>
-    document.querySelector('.search-send').addEventListener('click', () => {
+      document.querySelector('.search-send').addEventListener('click', () => {
       let 입력한거 = document.querySelector('.search').value
-      location.href = $`/serch?val={입력한}`
+      location.href = $`/serch?val={입력한거}`
     })
+      
   </script>
+  
+  <div class="white-bg" id="list">
     
-  <div class="list-box">
-    <h4>
-      <a href="https://gyeje.vercel.app/detail/1.html">내가 첫 번째 게시물이네 ㅋ</a>
-      <a onclick="alert('그딴 거 없다')">✏️</a>
-      <span onclick="alert('그딴 거 없다')">🗑️</span>
-    </h4>
-    <p>.java</p>
   </div>
-
-  <div class="list-box">
-    <h4>
-      <a href="https://gyeje.vercel.app/detail/2.html">nodejs 독학하기</a>
-      <a onclick="alert('그딴 거 없다')">✏️</a>
-      <span onclick="alert('그딴 거 없다')">🗑️</span>
-    </h4>
-    <p>바보입니다</p>
-  </div>
-
-  <div class="list-box">
-    <h4>
-      <a href="https://gyeje.vercel.app/detail/3.html">롯쿠나 키미토와 오와카레다</a>
-      <a onclick="alert('그딴 거 없다')">✏️</a>
-      <span onclick="alert('그딴 거 없다')">🗑️</span>
-    </h4>
-    <p>브로 Vip</p>
-    </div>
-
-    <div class="list-box">
-      <h4>
-        <a href="https://gyeje.vercel.app/detail/4.html">온 세상이 봇치다</a>
-        <a onclick="alert('그딴 거 없다')">✏️</a>
-        <span onclick="alert('그딴 거 없다')">🗑️</span>
-      </h4>
-      <p>임테기두줄이면임신맞죠</p>
-    </div>
-  </div>
+  <script>
+    fetch('https://gyeje.vercel.app/post.json')
+      .then(res => res.json())
+      .then(posts => {
+        const list = document.getElementById('list')
+        posts.forEach(element => {
+          list.innerHTML += `
+            <div class="list-box">
+              <h4>
+                <a href="https://gyeje.vercel.app/detail/${post.id}.html">${post.title}</a>
+                <a onclick="alert('그딴 거 없다')">✏️</a>
+                <span onclick="alert('그딴 거 없다')">🗑️</span>
+              </h4>
+              <p>${post.author}</p>
+            </div>
+          `
+        });
+      })
+      .catch(console.error)
+  </script>
 </body>
 </html>

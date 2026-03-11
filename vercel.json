@@ -1,5 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/detail/:id", "destination": "/detail.html" }
-  ]
-}
